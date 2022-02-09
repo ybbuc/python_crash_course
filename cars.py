@@ -3,8 +3,6 @@ cars = ['bmw', 'audi', 'toyota', 'subaru']
 print('Here is the original list:')
 print(cars)
 
-print('\nHere is the sorted list:')
-print(sorted(cars))
-
-print('\nHere is the original list again:')
+print('\nHere is the list in reverse order:')
+cars.reverse()
 print(cars)
