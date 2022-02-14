@@ -50,8 +50,8 @@ print("\nIs points < 2 or > 8? I predict False.")
 print(points < 2 or points > 8)
 
 cameras = ['canon', 'nikon', 'sony']
-print("\nIs 'sony' in cameras? I predict True.")
-print('sony' in cameras)
+print("\nIs 'Sony' in cameras? I predict True.")
+print('Sony'.lower() in cameras)
 
 print("\nIs 'fuji' not in cameras? I predict True.")
 print('fuji' not in cameras)
