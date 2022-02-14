@@ -1,8 +1,17 @@
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 
 print('Here is the original list:')
-print(cars)
+
+for car in cars:
+    if car == 'bmw':
+        print(car.upper())
+    else:
+        print(car.title())
 
 print('\nHere is the list in reverse order:')
 cars.reverse()
-print(cars)
+for car in cars:
+    if car == 'bmw':
+        print(car.upper())
+    else:
+        print(car.title())
