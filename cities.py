@@ -32,3 +32,9 @@ while True:
         break
     else:
         print(f"I'd love to go to {city.title()}!")
+
+def describe_city(name, country = "Germany"):
+    print(f"{name} is in {country}.")
+
+describe_city("Reykjavik", "Iceland")
+describe_city("Reykjavik")
