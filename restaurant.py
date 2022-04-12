@@ -16,9 +16,3 @@ class Restaurant:
     def open_restaurant(self):
         """Display a message indicating the restaurant is open."""
         print(f"{self.restaurant_name} is open.")
-
-restaurant = Restaurant("Zeitgeist", "German")
-print(f"Restaurant name: {restaurant.restaurant_name}")
-print(f"Cuisine type: {restaurant.cuisine_type}")
-restaurant.describe_restaurant()
-restaurant.open_restaurant()

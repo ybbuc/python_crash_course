@@ -12,7 +12,3 @@ class User:
     def greet_user(self):
         """Display a personalized message greeting the user."""
         print(f"Welcome, {self.first_name}!")
-
-user = User("John", "Doe")
-user.describe_user()
-user.greet_user()

@@ -1,19 +1,17 @@
-class User:
-    """A simple attempt to model a user."""
-    def __init__(self, first_name, last_name):
-        """Initialize first name and last name attributes."""
-        self.first_name = first_name
-        self.last_name = last_name
+from user import User
 
-    def describe_user(self):
-        """Display a short message describing the user."""
-        print(f"Name: {self.first_name} {self.last_name}")
+class Privileges:
+    """A simple attempt to model the privleges of a user."""
+    def __init__(self):
+        self.privileges = ["can add post", "can delete post", "can ban user"]
 
-    def greet_user(self):
-        """Display a personalized message greeting the user."""
-        print(f"Welcome, {self.first_name}!")
+    def show_privileges(self):
+        print("Privileges available:")
+        for privilege in self.privileges:
+            print(f"- {privilege}")
 
-class Admin(User):
+
+class Admin(User, Privileges):
     """A simple attempt to model an admin user."""
 
     def __init__(self, first_name, last_name):
@@ -22,12 +20,4 @@ class Admin(User):
         Then initialize attributes specific to an admin.
         """
         super().__init__(first_name, last_name)
-        self.privileges = ["can add post", "can delete post", "can ban user"]
-
-    def show_privileges(self):
-        print("Privileges available:")
-        for privilege in self.privileges:
-            print(f"- {privilege}")
-
-admin = Admin("John", "Doe")
-admin.show_privileges()
+        self.privileges = Privileges()
