@@ -1,4 +1,4 @@
-print("Give me two numbres, and I'll divide them.")
+print("Give me two numbers, and I'll divide them.")
 print("Enter 'q' to quit.")
 
 while True:
