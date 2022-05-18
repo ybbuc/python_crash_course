@@ -1,5 +1,5 @@
-def count_words(filename):
-    """Count the approximate number of words in a file."""
+def count_names(filename):
+    """Count the number of names in a file."""
     try:
         with open(filename, encoding='utf-8') as f:
             contents = f.read()
@@ -8,9 +8,8 @@ def count_words(filename):
     else:
         words = contents.split()
         num_words = len(words)
-        print(f"The file {filename} has about {num_words} words.")
+        print(f"The file {filename} has {num_words} names.")
 
-filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt',
-             'little_women.txt']
+filenames = ['cats.txt', 'dogs.txt']
 for filename in filenames:
-    count_words(filename)
+    count_names(filename)
