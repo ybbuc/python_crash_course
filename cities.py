@@ -1,40 +1,16 @@
-cities = {
-    'new york': {
-        'country': 'united states',
-        'population': 8406000,
-        'fact': 'the city that never sleeps'
-    },
-    'paris': {
-        'country': 'france',
-        'population': 2244000,
-        'fact': 'the city that never sleeps'
-    },
-    'tokyo': {
-        'country': 'japan',
-        'population': 9000000,
-        'fact': 'the city that never sleeps'
-    },
-}
+from city_functions import get_formatted_city_name
 
-for city in cities:
-    print("\n" + city.title())
-    print(f"Country: {cities[city]['country'].title()}")
-    print(f"Population: {cities[city]['population']}")
-    print(f"Fact: {cities[city]['fact']}")
-
-prompt = "\nPlease enter the name of a city you have visited:"
-prompt += "\n(Enter 'quit' when you are finished.) "
-
+print("Enter 'q' at any time to quit.")
 while True:
-    city = input(prompt)
-
-    if city == 'quit':
+    city = input("\nPlease give me a city name: ")
+    if city.lower() == 'q':
         break
-    else:
-        print(f"I'd love to go to {city.title()}!")
+    country = input("Please give me a country name: ")
+    if country.lower() == 'q':
+        break
+    population = input("Please give me the population: ")
+    if country.lower() == 'q':
+        break
 
-def describe_city(name, country = "Germany"):
-    print(f"{name} is in {country}.")
-
-describe_city("Reykjavik", "Iceland")
-describe_city("Reykjavik")
+    formatted_city_name = get_formatted_city_name(city, country, population)
+    print(f"\nNeatly formatted: {formatted_city_name}")
